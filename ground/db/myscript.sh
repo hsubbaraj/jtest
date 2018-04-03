@@ -1,1 +1,1 @@
-python3 /home/travis/ground/db/postgres_setup.py ground ground drop
+python3 ground/db/postgres_setup.py ground ground drop

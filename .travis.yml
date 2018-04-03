@@ -17,4 +17,5 @@ before_script:
 
 script:
   - bash ground/db/myscript.sh
+  - python jarvis/test/test_plate.py
 
