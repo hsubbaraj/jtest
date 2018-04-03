@@ -1,0 +1,246 @@
+2018-03-19 15:22:55,639 [INFO] from application in main - Creating Pool for datasource 'default'
+2018-03-19 15:22:55,811 [ERROR] from org.postgresql.Driver in main - Connection error: 
+org.postgresql.util.PSQLException: FATAL: role "ground" does not exist
+  Location: File: miscinit.c, Routine: InitializeSessionUserId, Line: 504
+  Server SQLState: 28000
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2538)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:122)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:227)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:194)
+	at org.postgresql.Driver.makeConnection(Driver.java:431)
+	at org.postgresql.Driver.connect(Driver.java:247)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:95)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:101)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:341)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:506)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:105)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:71)
+	at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:58)
+	at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:54)
+	at scala.util.Try$.apply(Try.scala:192)
+	at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:54)
+	at play.api.db.PooledDatabase.createDataSource(Databases.scala:199)
+	at play.api.db.DefaultDatabase.dataSource$lzycompute(Databases.scala:123)
+	at play.api.db.DefaultDatabase.dataSource(Databases.scala:121)
+	at play.api.db.DefaultDatabase.getConnection(Databases.scala:142)
+	at play.api.db.DefaultDatabase.getConnection(Databases.scala:138)
+	at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:44)
+	at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:42)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at play.api.db.DefaultDBApi.connect(DefaultDBApi.scala:42)
+	at play.api.db.DBApiProvider.get$lzycompute(DBModule.scala:72)
+	at play.api.db.DBApiProvider.get(DBModule.scala:62)
+	at play.api.db.DBApiProvider.get(DBModule.scala:58)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:81)
+	at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:72)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:62)
+	at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)
+	at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:104)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:85)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:267)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:145)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
+	at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:54)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:62)
+	at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:984)
+	at com.google.inject.util.Providers$GuicifiedProviderWithDependencies.initialize(Providers.java:149)
+	at com.google.inject.util.Providers$GuicifiedProviderWithDependencies$$FastClassByGuice$$2a7177aa.invoke(<generated>)
+	at com.google.inject.internal.cglib.reflect.$FastMethod.invoke(FastMethod.java:53)
+	at com.google.inject.internal.SingleMethodInjector$1.invoke(SingleMethodInjector.java:57)
+	at com.google.inject.internal.SingleMethodInjector.inject(SingleMethodInjector.java:91)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
+	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.Initializer$InjectableReference.get(Initializer.java:174)
+	at com.google.inject.internal.Initializer.injectAll(Initializer.java:108)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:174)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+	at com.google.inject.Guice.createInjector(Guice.java:96)
+	at com.google.inject.Guice.createInjector(Guice.java:84)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:181)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)
+	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:21)
+	at play.core.server.ProdServerStart$.start(ProdServerStart.scala:47)
+	at play.core.server.ProdServerStart$.main(ProdServerStart.scala:22)
+	at play.core.server.ProdServerStart.main(ProdServerStart.scala)
+2018-03-19 15:22:55,935 [INFO] from application in main - Creating Pool for datasource 'default'
+2018-03-19 15:22:55,938 [ERROR] from org.postgresql.Driver in main - Connection error: 
+org.postgresql.util.PSQLException: FATAL: role "ground" does not exist
+  Location: File: miscinit.c, Routine: InitializeSessionUserId, Line: 504
+  Server SQLState: 28000
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2538)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:122)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:227)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:194)
+	at org.postgresql.Driver.makeConnection(Driver.java:431)
+	at org.postgresql.Driver.connect(Driver.java:247)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:95)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:101)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:341)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:506)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:105)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:71)
+	at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:58)
+	at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:54)
+	at scala.util.Try$.apply(Try.scala:192)
+	at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:54)
+	at play.api.db.PooledDatabase.createDataSource(Databases.scala:199)
+	at play.api.db.DefaultDatabase.dataSource$lzycompute(Databases.scala:123)
+	at play.api.db.DefaultDatabase.dataSource(Databases.scala:121)
+	at play.api.db.DefaultDatabase.getConnection(Databases.scala:142)
+	at play.api.db.DefaultDatabase.getConnection(Databases.scala:138)
+	at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:44)
+	at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:42)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at play.api.db.DefaultDBApi.connect(DefaultDBApi.scala:42)
+	at play.api.db.DBApiProvider.get$lzycompute(DBModule.scala:72)
+	at play.api.db.DBApiProvider.get(DBModule.scala:62)
+	at play.api.db.DBApiProvider.get(DBModule.scala:58)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:81)
+	at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:72)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:62)
+	at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:54)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:62)
+	at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:984)
+	at com.google.inject.util.Providers$GuicifiedProviderWithDependencies.initialize(Providers.java:149)
+	at com.google.inject.util.Providers$GuicifiedProviderWithDependencies$$FastClassByGuice$$2a7177aa.invoke(<generated>)
+	at com.google.inject.internal.cglib.reflect.$FastMethod.invoke(FastMethod.java:53)
+	at com.google.inject.internal.SingleMethodInjector$1.invoke(SingleMethodInjector.java:57)
+	at com.google.inject.internal.SingleMethodInjector.inject(SingleMethodInjector.java:91)
+	at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+	at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
+	at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+	at com.google.inject.internal.Initializer$InjectableReference.get(Initializer.java:174)
+	at com.google.inject.internal.Initializer.injectAll(Initializer.java:108)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:174)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+	at com.google.inject.Guice.createInjector(Guice.java:96)
+	at com.google.inject.Guice.createInjector(Guice.java:84)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:181)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)
+	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:21)
+	at play.core.server.ProdServerStart$.start(ProdServerStart.scala:47)
+	at play.core.server.ProdServerStart$.main(ProdServerStart.scala:22)
+	at play.core.server.ProdServerStart.main(ProdServerStart.scala)
+2018-03-20 09:17:27,852 [INFO] from application in main - Creating Pool for datasource 'default'
+2018-03-20 09:17:28,145 [INFO] from play.api.db.DefaultDBApi in main - Database [default] connected at jdbc:postgresql://localhost:5432/ground
+2018-03-20 09:17:29,656 [INFO] from application in main - Ground Postgres: Starting application at 2018-03-20T16:17:29.655Z
+2018-03-20 09:17:29,656 [INFO] from application in main - Queries will Cache for 5 seconds.
+2018-03-20 09:17:29,669 [INFO] from play.api.Play in main - Application started (Prod)
+2018-03-20 09:17:30,161 [INFO] from play.core.server.NettyServer in main - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2018-03-20 09:26:11,077 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s650ms).
+2018-03-20 09:28:37,550 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m26s473ms).
+2018-03-20 09:29:56,053 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s503ms).
+2018-03-20 09:31:17,503 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s445ms).
+2018-03-20 09:33:36,928 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m19s425ms).
+2018-03-20 09:35:02,831 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s903ms).
+2018-03-20 09:36:26,331 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s500ms).
+2018-03-20 09:39:08,839 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m12s502ms).
+2018-03-20 09:39:58,317 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s478ms).
+2018-03-20 09:42:19,805 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m21s488ms).
+2018-03-20 10:01:39,657 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m49s740ms).
+2018-03-20 10:16:57,050 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Retrograde clock change detected (housekeeper delta=17s256ms), soft-evicting connections from pool.
+2018-03-20 10:20:03,627 [INFO] from application in Thread-8 - Ground Postgres: Stopping application at 2018-03-20T17:20:03.626Z after 3754s.
+2018-03-20 10:20:03,720 [INFO] from application in Thread-8 - Shutting down connection pool.
+2018-03-20 10:20:08,635 [INFO] from application in main - Creating Pool for datasource 'default'
+2018-03-20 10:20:08,824 [INFO] from play.api.db.DefaultDBApi in main - Database [default] connected at jdbc:postgresql://localhost:5432/ground
+2018-03-20 10:20:10,090 [INFO] from application in main - Ground Postgres: Starting application at 2018-03-20T17:20:10.089Z
+2018-03-20 10:20:10,091 [INFO] from application in main - Queries will Cache for 5 seconds.
+2018-03-20 10:20:10,101 [INFO] from play.api.Play in main - Application started (Prod)
+2018-03-20 10:20:10,544 [INFO] from play.core.server.NettyServer in main - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2018-03-20 11:23:45,529 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m6s61ms).
+2018-03-20 11:55:14,652 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m28s899ms).
+2018-03-20 11:57:33,098 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m48s436ms).
+2018-03-20 12:04:09,884 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m6s779ms).
+2018-03-20 12:05:46,201 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s305ms).
+2018-03-20 12:11:38,598 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Retrograde clock change detected (housekeeper delta=16s820ms), soft-evicting connections from pool.
+2018-03-20 12:33:08,096 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m59s353ms).
+2018-03-20 12:47:54,628 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Retrograde clock change detected (housekeeper delta=16s385ms), soft-evicting connections from pool.
+2018-03-20 12:58:51,172 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m56s518ms).
+2018-03-20 13:06:51,106 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m59s933ms).
+2018-03-20 13:09:44,115 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m53s10ms).
+2018-03-20 13:11:17,595 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s480ms).
+2018-03-20 13:12:17,007 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s412ms).
+2018-03-20 13:16:38,530 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m9s441ms).
+2018-03-20 13:30:24,911 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m46s381ms).
+2018-03-20 13:39:49,625 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m24s714ms).
+2018-03-20 13:53:34,136 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m44s511ms).
+2018-03-20 14:07:37,637 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m3s501ms).
+2018-03-20 14:10:05,960 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m28s322ms).
+2018-03-20 14:34:37,009 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m31s50ms).
+2018-03-20 14:44:29,319 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m22s302ms).
+2018-03-20 16:28:32,687 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m32s597ms).
+2018-03-20 16:32:51,127 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m48s430ms).
+2018-03-20 16:38:36,871 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Retrograde clock change detected (housekeeper delta=15s683ms), soft-evicting connections from pool.
+2018-03-20 16:41:13,201 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s331ms).
+2018-03-20 16:50:10,066 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s800ms).
+2018-03-20 16:57:59,953 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m19s842ms).
+2018-03-20 17:05:57,950 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m27s980ms).
+2018-03-20 17:07:31,521 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s571ms).
+2018-03-20 17:18:10,770 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m39s249ms).
+2018-03-20 17:32:26,048 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m15s254ms).
+2018-03-20 17:46:18,519 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m52s473ms).
+2018-03-20 18:27:29,120 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m10s601ms).
+2018-03-20 19:08:39,297 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m10s177ms).
+2018-03-20 19:26:35,146 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m55s849ms).
+2018-03-20 19:31:37,858 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s682ms).
+2018-03-20 19:44:00,937 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m23s63ms).
+2018-03-20 19:48:08,864 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m7s927ms).
+2018-03-20 19:49:41,326 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s462ms).
+2018-03-20 19:50:47,893 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s566ms).
+2018-03-20 19:57:47,753 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m29s852ms).
+2018-03-20 20:00:15,137 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m27s384ms).
+2018-03-20 20:06:52,642 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m7s500ms).
+2018-03-20 20:20:23,397 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m30s754ms).
+2018-03-20 21:07:06,239 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m12s550ms).
+2018-03-20 21:08:34,820 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m28s582ms).
+2018-03-20 21:20:26,280 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m21s404ms).
+2018-03-20 21:33:31,968 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m5s653ms).
+2018-03-20 21:35:18,128 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Retrograde clock change detected (housekeeper delta=16s133ms), soft-evicting connections from pool.
+2018-03-20 22:22:53,145 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m34s702ms).
+2018-03-20 23:26:59,177 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m36s23ms).
+2018-03-21 11:43:30,299 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h4m28s793ms).
+2018-03-21 11:43:45,577 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Retrograde clock change detected (housekeeper delta=15s796ms), soft-evicting connections from pool.
+2018-03-21 12:12:50,912 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m5s301ms).
+2018-03-21 12:31:20,168 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m29s117ms).
+2018-03-21 12:33:03,753 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m43s586ms).
+2018-03-21 12:35:48,363 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s573ms).
+2018-03-21 12:36:45,064 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s702ms).
+2018-03-21 12:43:15,357 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m282ms).
+2018-03-21 13:08:23,833 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s272ms).
+2018-03-21 13:14:31,452 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m7s621ms).
+2018-03-21 13:34:58,138 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m26s686ms).
+2018-03-21 13:55:23,263 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m55s121ms).
+2018-03-21 13:56:39,009 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s746ms).
+2018-03-21 13:58:04,576 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s561ms).
+2018-03-21 13:59:40,112 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s536ms).
+2018-03-21 14:02:22,682 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s570ms).
+2018-03-21 14:03:23,258 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m575ms).
+2018-03-21 14:03:39,123 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Retrograde clock change detected (housekeeper delta=15s864ms), soft-evicting connections from pool.
+2018-03-21 14:53:22,623 [INFO] from application in Thread-8 - Ground Postgres: Stopping application at 2018-03-21T21:53:22.616Z after 102792s.
+2018-03-21 14:53:22,813 [INFO] from application in Thread-8 - Shutting down connection pool.

@@ -1,0 +1,1 @@
+python3 /Users/hari/Desktop/Cal/rise/jtest/ground/db/postgres_setup.py ground ground drop
