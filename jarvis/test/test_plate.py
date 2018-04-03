@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/Users/hari/Desktop/Cal/rise')
 import jarvis
 
 def test_plate():
@@ -21,6 +19,7 @@ def test_plate():
 
 	doMultiply = ex.action(multiply, [ones, tens])
 	product = ex.artifact('product.txt', doMultiply)
+	
 
 	product.pull()
 	product.plot()
