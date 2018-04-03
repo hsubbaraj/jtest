@@ -1,0 +1,20 @@
+language: python
+
+
+sudo: false
+
+services:
+  - postgresql
+
+python:
+  - "3.4.2"
+
+install:
+  - pip install -r jarvis/requirements.txt
+
+before_script:
+  - psql -c 'create database ground;' -U postgres
+
+script:
+  - bash ground/db/myscript.sh
+
